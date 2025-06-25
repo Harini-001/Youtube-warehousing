@@ -12,6 +12,7 @@ import re
 
 import json
 
+import setup_local_db
 
 
 st.title('📺 YouTube Data Harvesting and Warehousing')
