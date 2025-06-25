@@ -1,10 +1,8 @@
 import streamlit as st
 import pandas as pd
-import numpy as np # Not used in final code, can remove
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 import re
-import json # Not used in final code, can remove
 import os # For environment variables
 import sqlite3
 import time # For backoff
