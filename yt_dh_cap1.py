@@ -850,8 +850,6 @@ def Fetch_comment_data(newchannel_id):
             except HttpError as e:
                 pass
 
-!pip install -q streamlit
-
 
 
 #Streamlit coding part to showcase the output in streamlit
