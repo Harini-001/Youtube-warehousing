@@ -537,10 +537,6 @@ def fetch_most_commented_videos():
 # Call the function to fetch and print the data
 fetch_most_commented_videos()
 
-! pip install streamlit -q
-
-!wget -q -O - ipv4.icanhazip.com
-
 # Commented out IPython magic to ensure Python compatibility.
 # #Import necessary libraries
 # %%writefile app.py
@@ -927,8 +923,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-!npm install localtunnel
-
-!streamlit run app.py & npx localtunnel --port 8501
-
-!wget -q -O - ipv4.icanhazip.com
