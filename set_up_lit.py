@@ -29,7 +29,7 @@ from googleapiclient.errors import HttpError
 import sqlite3
 
 # Connect to the SQLite database 'db1'
-conn = sqlite3.connect('db1.db')
+conn = sqlite3.connect('./db1.db')
 
 # Create a cursor object to execute SQL commands
 cursor = conn.cursor()
@@ -52,7 +52,7 @@ def Api_connector():
     return youtube
 youtube=Api_connector()
 import sqlite3
-conn = sqlite3.connect("db1.db")
+conn = sqlite3.connect("./db1.db")
 cursor = conn.cursor()
 
 # Make sure the table exists before any other operation
@@ -76,7 +76,7 @@ cursor.execute('''
 conn.commit()
 conn.close()
 if st.button("🔍 Check Existing Tables"):
-    conn = sqlite3.connect("db1.db")
+    conn = sqlite3.connect("./db1.db")
     tables = pd.read_sql("SELECT name FROM sqlite_master WHERE type='table';", conn)
     conn.close()
     st.dataframe(tables)
@@ -104,7 +104,7 @@ import sqlite3
 
 def eachchanneldetails(channel_ids):
     # Connect to the SQLite database 'youtube_data.db'
-    conn = sqlite3.connect('db1.db')
+    conn = sqlite3.connect('./db1.db')
 
     # Create a cursor object to execute SQL commands
     cursor = conn.cursor()
@@ -213,7 +213,7 @@ import pandas as pd
 import sqlite3
 
 def insert_videos_into_sqlite(df1):
-    conn = sqlite3.connect('db1.db')
+    conn = sqlite3.connect('./db1.db')
     cursor = conn.cursor()
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS videos (
@@ -308,7 +308,7 @@ import pandas as pd
 import sqlite3
 
 def insert_comments_into_sqlite(df2):
-    conn = sqlite3.connect('db1.db')
+    conn = sqlite3.connect('./db1.db')
     cursor = conn.cursor()
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS comments (
@@ -363,7 +363,7 @@ import pandas as pd
 
 def fetch_video_and_channel_names():
     # Connect to the SQLite database
-    conn = sqlite3.connect('db1.db')
+    conn = sqlite3.connect('./db1.db')
 
     # Execute the query to join videos and channels tables
     query = """
@@ -387,7 +387,7 @@ import pandas as pd
 
 def fetch_channels_with_most_videos():
     # Connect to the SQLite database
-    conn = sqlite3.connect('db1.db')
+    conn = sqlite3.connect('./db1.db')
 
     # Execute the query to count videos per channel
     query = """
@@ -413,7 +413,7 @@ import pandas as pd
 
 def fetch_top_10_viewed_videos():
     # Connect to the SQLite database
-    conn = sqlite3.connect('db1.db')
+    conn = sqlite3.connect('./db1.db')
 
     # Execute the query to get the top 10 most viewed videos
     query = """
@@ -439,7 +439,7 @@ import pandas as pd
 
 def fetch_comments_per_video():
     # Connect to the SQLite database
-    conn = sqlite3.connect('db1.db')
+    conn = sqlite3.connect('./db1.db')
 
     # Execute the query to count comments per video
     query = """
@@ -464,7 +464,7 @@ import pandas as pd
 
 def fetch_most_liked_video():
     # Connect to the SQLite database
-    conn = sqlite3.connect('db1.db')
+    conn = sqlite3.connect('./db1.db')
 
     # Execute the query to find the most liked video
     query = """
@@ -490,7 +490,7 @@ import pandas as pd
 
 def fetch_total_likes_per_video():
     # Connect to the SQLite database
-    conn = sqlite3.connect('db1.db')
+    conn = sqlite3.connect('./db1.db')
 
     # Execute the query to calculate total likes per video
     query = """
@@ -514,7 +514,7 @@ import pandas as pd
 
 def fetch_total_views_per_channel():
     # Connect to the SQLite database
-    conn = sqlite3.connect('db1.db')
+    conn = sqlite3.connect('./db1.db')
 
     # Execute the query to calculate total views per channel
     query = """
@@ -539,7 +539,7 @@ import pandas as pd
 
 def fetch_channels_published_in_2022():
     # Connect to the SQLite database
-    conn = sqlite3.connect('db1.db')
+    conn = sqlite3.connect('./db1.db')
 
     # Execute the query to find channels that published videos in 2022
     query = """
@@ -564,7 +564,7 @@ import pandas as pd
 
 def fetch_average_video_duration_per_channel():
     # Connect to the SQLite database
-    conn = sqlite3.connect('db1.db')
+    conn = sqlite3.connect('./db1.db')
 
     # Execute the query to calculate average video duration per channel
     query = """
@@ -589,7 +589,7 @@ import pandas as pd
 
 def fetch_most_commented_videos():
     # Connect to the SQLite database
-    conn = sqlite3.connect('db1.db')
+    conn = sqlite3.connect('./db1.db')
 
     # Execute the query to find the most commented video
     query = """
@@ -638,7 +638,7 @@ import pandas as pd
 
 def fetch_data(query):
     # Connect to the SQLite database
-    conn = sqlite3.connect('db1.db')
+    conn = sqlite3.connect('./db1.db')
 
     # Read the query result into a pandas DataFrame
     df = pd.read_sql_query(query, conn)
@@ -653,7 +653,7 @@ import sqlite3
 import pandas as pd
 
 def execute_query(question):
-    conn = sqlite3.connect('db1.db')  # Ensure this matches the DB used for table creation
+    conn = sqlite3.connect('./db1.db')  # Ensure this matches the DB used for table creation
 
     query_mapping = {
         "What are the names of all the videos and their corresponding channels?":
@@ -734,7 +734,7 @@ import pandas as pd
 
 def fetch_channel_data(newchannel_id):
     # Connect to the SQLite database
-    conn = sqlite3.connect('db1.db')
+    conn = sqlite3.connect('./db1.db')
 
     # Execute the query to check if the channel exists
     query = "SELECT * FROM channels WHERE channel_id = ?"
@@ -763,7 +763,7 @@ import pandas as pd
 
 def fetch_channel_data(newchannel_id):
     # Connect to the SQLite database
-    conn = sqlite3.connect('db1.db')
+    conn = sqlite3.connect('./db1.db')
 
     # Execute the query to check if the channel exists
     query = "SELECT * FROM channels WHERE channel_id = ?"
@@ -881,7 +881,7 @@ import pandas as pd
 
 def insert_video_info(video_info):
     # Connect to the SQLite database
-    conn = sqlite3.connect('db1.db')
+    conn = sqlite3.connect('./db1.db')
 
     # Create a cursor object to execute SQL commands
     cursor = conn.cursor()
@@ -955,7 +955,7 @@ import pandas as pd
 
 def insert_comment_data(commentdata):
     # Connect to the SQLite database
-    conn = sqlite3.connect('db1.db')
+    conn = sqlite3.connect('./db1.db')
 
     # Create a cursor object to execute SQL commands
     cursor = conn.cursor()
