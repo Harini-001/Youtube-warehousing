@@ -8,7 +8,6 @@ Original file is located at
 """
 
 import pandas as pd
-import mysql.connector
 import re
 from sqlalchemy import create_engine
 from googleapiclient.discovery import build
