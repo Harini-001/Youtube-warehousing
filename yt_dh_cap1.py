@@ -33,7 +33,7 @@ conn.close()
 
 #Used Google API key to fetch the data from youtube
 def Api_connector():
-    apikey="AIzaSyCsm6BnqXcs7ydAwvsmFc6oOEqZwCzYpvo"
+    apikey="AIzaSyCB2Cx6RuO0G1rlZK9XbINkGG9vvqNS2ZE"
     api_service_name = "youtube"
     api_version = "v3"
     youtube=build(api_service_name,api_version,developerKey=apikey)
@@ -555,7 +555,7 @@ fetch_most_commented_videos()
 # Define API version and service name
 api_service_name = "youtube"
 api_version = "v3"
-api_key="AIzaSyCsm6BnqXcs7ydAwvsmFc6oOEqZwCzYpvo"
+api_key="AIzaSyCB2Cx6RuO0G1rlZK9XbINkGG9vvqNS2ZE"
 
 youtube = googleapiclient.discovery.build(api_service_name, api_version, developerKey=api_key)
 
